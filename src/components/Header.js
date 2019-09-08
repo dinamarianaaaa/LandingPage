@@ -1,9 +1,9 @@
 import React from 'react';
 import Headerpict from './Assets/headerpict.jpg';
+import Logo from './Assets/logo.png';
 import { makeStyles } from '@material-ui/core/styles';
 import LazyHero from 'react-lazy-hero';
 import { Button } from 'terra-component-lib';
-
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -41,6 +41,12 @@ const useStyles = makeStyles(theme => ({
   textHeader: {
     color: 'white',
   },
+  logo: {
+    position: 'absolute',
+    left: '50px',
+    top: '50px',
+    zIndex: '3'
+   },
 }));
 
 export default function Header() {
@@ -51,7 +57,11 @@ export default function Header() {
       <CssBaseline />
         <main>
         <div>
-            <LazyHero imageSrc={Headerpict} 
+            <LazyHero className={classes.logo}
+            imageSrc={Logo}
+            opacity="0"
+            ></LazyHero>
+           <LazyHero imageSrc={Headerpict}
             color="#004a75"
             minHeight="100vh"
             opacity="0.7"

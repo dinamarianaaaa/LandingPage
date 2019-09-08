@@ -5,12 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
-    icon: {
-      marginRight: theme.spacing(2),
-    },
     textCookie: {
         color: 'black',
-        fontSize: '12px'
+        fontSize: '13px'
       },
 }));
 
@@ -25,7 +22,7 @@ export default function Cookie() {
     >
     <Typography className={classes.textCookie}
     component="p" variant="p" align="center">
-    By accessing and using this website, you acknowledge that you have read and <br />
+    By accessing and using this website, you acknowledge that you have read and <br></br>
     understand our <Link to="/">Cookie Policy,</Link> 
     <Link>Privacy, </Link> and our <Link> Terms of Service.</Link>
     </Typography>

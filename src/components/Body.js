@@ -1,39 +1,27 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {' © '}
-      <Link color="inherit" href="https://www.linkedin.com/in/dinamariana">
-        2019 Dina Mariana. All rights reserved.
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 const useStyles = makeStyles(theme => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: '#e5e5e5',
+  },
   icon: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2)
   },
   heroContent: {
     backgroundColor: '#e5e5e5',
     padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
   },
   cardGrid: {
     backgroundColor: '#e5e5e5',
@@ -44,20 +32,18 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
+    backgroundColor: '#e5e5e5',
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%',
   },
   cardContent: {
     flexGrow: 1,
   },
-  footer: {
-    backgroundColor: '#004a75',
-    padding: theme.spacing(6),
+  fontSizeContent: {
+    fontSize: '13px'
   },
-}));
-
-const cards = [1, 2, 3, 4, 5, 6];
+ }));
 
 export default function Body() {
   const classes = useStyles();
@@ -78,45 +64,135 @@ export default function Body() {
               program areas scale.
             </Typography>
             </Container>
-            <Container className={classes.cardGrid}>
+            <Container className={classes.root}>
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map(card => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+             {/* 1st Content */}
+              <Grid item xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
-                  <CardMedia
+                <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Consult
+                    </Typography>
+                    <Typography className={classes.fontSizeContent}>
+                      Co-create, design thinking; strengthen infrastructure resist <br />
+                      granular. Revolution circular, movements or framework <br />
+                      social impact low-hanging fruit. Save the world <br />
+                      compelling revolutionary progress.
+                    </Typography>
+                  </CardContent>
+                  </Card>                
+              </Grid>
+
+              {/* 2nd Content */}
+              <Grid item xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Design
+                    </Typography>
+                    <Typography className={classes.fontSizeContent}>
+                      Policymaker collaborates collective impact humanitarian <br />
+                      shared value vocabulary inspire issue outcomes agile. <br />
+                      Overcome injustice deep dive agile issue outcomes vibrant <br />
+                      boots on the ground sustainable.
+                    </Typography>
+                  </CardContent>
+                  </Card>               
+              </Grid>
+
+              {/* 3rd Content */}
+                <Grid item xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                  {/* <CardMedia
                     className={classes.cardMedia}
                     image="https://source.unsplash.com/random"
                     title="Image title"
-                  />
+                  /> */}
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Develop
                     </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe the content.
+                    <Typography className={classes.fontSizeContent}>
+                      Revolutionary circular, movements a or impact framework <br />
+                      social impact low-hanging. Save the compelling <br />
+                      revolutionary inspire progress. Collective impacts and <br />
+                      challenges for opportunities of thought provoking.
                     </Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
-                </Card>
+                  </Card>               
               </Grid>
-            ))}
+
+               {/* 4th Content */}
+               <Grid item xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                  {/* <CardMedia
+                    className={classes.cardMedia}
+                    image="https://source.unsplash.com/random"
+                    title="Image title"
+                  /> */}
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Marketing
+                    </Typography>
+                    <Typography className={classes.fontSizeContent}>
+                      Peaceful; vibrant paradigm, collaborative cities. Shared <br />
+                      vocabulary agile, replicable, effective altruism youth. <br />
+                      Mobilize commitment to overcome injustice resilient, uplift <br />
+                      social transparent effective.
+                    </Typography>
+                  </CardContent>
+                  </Card>               
+              </Grid>
+
+              {/* 5th Content */}
+               <Grid item xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                  {/* <CardMedia
+                    className={classes.cardMedia}
+                    image="https://source.unsplash.com/random"
+                    title="Image title"
+                  /> */}
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Manage
+                    </Typography>
+                    <Typography className={classes.fontSizeContent}>
+                      Change-makers innovation or shared unit of analysis. <br />
+                      Overcome injustice outcomes strategize vibrant boots on <br />
+                      the ground sustainable. Optimism, effective altruism <br />
+                      invest optimism corporate social.
+                    </Typography>
+                  </CardContent>
+                  </Card>               
+              </Grid>
+
+              {/* 6th Content */}
+              <Grid item xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                  {/* <CardMedia
+                    className={classes.cardMedia}
+                    image="https://source.unsplash.com/random"
+                    title="Image title"
+                  /> */}
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Evolve
+                    </Typography>
+                    <Typography className={classes.fontSizeContent}>
+                      Activate catalyze and impact contextualize humanitarian. <br />
+                      Unit of analysis overcome injustice storytelling altruism. <br />
+                      Thought leadership mass incarceration. Outcomes big <br />
+                      data, fairness social game-changer.
+                    </Typography>
+                  </CardContent>
+                  </Card>               
+              </Grid>
+
           </Grid>
         </Container>
         </div>      
       </main>
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Copyright />
-      </footer>
-      {/* End footer */}
     </React.Fragment>
   );
 }
